@@ -1,0 +1,21 @@
+experiment,data_size,workers,mean_time_s,peak_memory_mb,speedup
+Python loops,200000,1,0.017036,0.00,1.0
+NumPy,200000,-,0.00052,1.53,32.73
+Python loops,200000,1,0.03463,-,1.0
+NumPy (bincount),200000,-,0.023763,-,1.46
+Sequential,20000,1,0.737051,-,1.0
+ThreadPoolExecutor,20000,4,0.858242,-,0.86
+ProcessPoolExecutor,20000,4,0.340961,-,2.16
+NumPy (vectorized),20000,-,0.040551,-,18.18
+Threads x1,20000,1,0.853105,-,0.86
+Processes x1,20000,1,0.84234,-,0.88
+Threads x2,20000,2,0.847719,-,0.87
+Processes x2,20000,2,0.485452,-,1.52
+Threads x4,20000,4,0.845125,-,0.87
+Processes x4,20000,4,0.331852,-,2.22
+Threads x8,20000,8,0.858946,-,0.86
+Processes x8,20000,8,0.404499,-,1.82
+Sequential import,8,1,2.169449,-,1.0
+ThreadPoolExecutor import,8,8,0.517673,-,4.19
+Cold cache (first call),200000,-,0.003899,-,1.0
+Warm cache (repeated call),200000,-,3e-06,-,1141.4
